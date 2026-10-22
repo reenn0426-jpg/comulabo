@@ -102,6 +102,10 @@
   .link b{display:block;font-family:"M PLUS Rounded 1c";font-size:18px}
   .link span{color:var(--ink-soft);font-size:14px;line-height:1.6;display:block}
 
+  .nw{display:inline-block}
+  body{line-break:strict;word-break:auto-phrase;text-wrap:pretty}
+  h1,h2,.bubble,.say{text-wrap:balance}
+
   /* stage animation */
   .stage{position:relative;height:clamp(330px,52vw,470px);border-radius:var(--radius);overflow:hidden;
     background:radial-gradient(120% 90% at 50% 100%,#fff 0%,#f3ecfc 45%,#e9e0f8 100%);
@@ -127,7 +131,7 @@
     box-shadow:0 8px 20px -10px rgba(90,69,144,.45);opacity:0;transform:translateY(8px) scale(.9);transition:all .3s cubic-bezier(.3,1.5,.6,1)}
   .say.show{opacity:1;transform:none}
   .say.m{left:12%} .say.r{right:12%}
-  @media (max-width:640px){.say.m{left:3%} .say.r{right:3%}}
+  @media (max-width:640px){.say.m{left:3%} .say.r{right:3%} .say{max-width:64%}}
   .say::after{content:"";position:absolute;bottom:-10px;border:10px solid transparent;border-top-color:#fff;border-bottom:0}
   .say.m::after{left:28px} .say.r::after{right:28px}
   @media (prefers-reduced-motion:reduce){.floaty,.chara .body{animation:none!important}}
@@ -172,8 +176,8 @@
     </div>
     <div class="hero-text">
       <span class="badge">コミュラボ</span>
-      <h1>前者2人の<br>コミュニケーション研究室</h1>
-      <p class="lead">コミュニケーションの不思議を、<br>前者後者論から紐解く研究室です。</p>
+      <h1><span class="nw">前者2人の</span><br><span class="nw">コミュニケーション</span><span class="nw">研究室</span></h1>
+      <p class="lead"><span class="nw">コミュニケーションの</span><span class="nw">不思議を、</span><br><span class="nw">前者後者論から</span><span class="nw">紐解く</span><span class="nw">研究室です。</span></p>
       <div class="btns">
         <a class="btn btn-main" href="https://www.youtube.com/@comulabo" target="_blank" rel="noopener">▶ YouTubeで聴く</a>
         <a class="btn btn-sub" href="#start">はじめての方へ</a>
@@ -183,15 +187,15 @@
 
   <section id="about">
     <div class="wrap">
-      <div class="sec-title"><small>ABOUT</small><h2>こんなモヤモヤ、ありませんか？</h2></div>
+      <div class="sec-title"><small>ABOUT</small><h2><span class="nw">こんなモヤモヤ、</span><span class="nw">ありませんか？</span></h2></div>
       <div class="bubbles">
-        <div class="bubble">なんであの人と話が噛み合わへんの？</div>
-        <div class="bubble">ちゃんと説明したのに、なんで伝わってないん？</div>
-        <div class="bubble">悪気はないのに、なぜかいつもすれ違う…</div>
+        <div class="bubble"><span class="nw">なんであの人と</span><span class="nw">話が</span><span class="nw">噛み合わへんの？</span></div>
+        <div class="bubble"><span class="nw">ちゃんと説明したのに、</span><span class="nw">なんで</span><span class="nw">伝わってないん？</span></div>
+        <div class="bubble"><span class="nw">悪気はないのに、</span><span class="nw">なぜかいつも</span><span class="nw">すれ違う…</span></div>
       </div>
       <div class="answer">
-        それ、性格のせいやなくて<br><strong>「脳の仕組みの違い」</strong>かもしれません。<br>
-        <span style="font-size:.85em;color:var(--ink-soft)">職場の人間関係、パートナーとのすれ違い、家族や友だちとのモヤモヤ。<br>前者後者論で見てみると、ちょっとラクになるかもしれません。</span>
+        <span class="nw">それ、</span><span class="nw">性格のせいやなくて</span><br><strong class="nw">「脳の仕組みの違い」</strong><span class="nw">かもしれません。</span><br>
+        <span style="font-size:.85em;color:var(--ink-soft)"><span class="nw">職場の人間関係、</span><span class="nw">パートナーとのすれ違い、</span><span class="nw">家族や友だちとのモヤモヤ。</span><br><span class="nw">前者後者論で</span><span class="nw">見てみると、</span><span class="nw">ちょっとラクに</span><span class="nw">なるかもしれません。</span></span>
       </div>
     </div>
   </section>
@@ -205,17 +209,17 @@
           <h3>ree</h3>
           <span class="type a">A前者</span>
           <p class="fam">夫：後者（図書館）</p>
-          <p>広い交友関係から生まれる、いろんなネタを持ち込みます。</p>
+          <p><span class="nw">広い交友関係から</span><span class="nw">生まれる、</span><span class="nw">いろんなネタを</span><span class="nw">持ち込みます。</span></p>
         </div>
         <div class="member">
           <img src="minuts.png" alt="ミーナッツ（ネコ耳のキャラクター）">
           <h3>ミーナッツ</h3>
           <span class="type b">B前者</span>
           <p class="fam">夫：後者（ブラックホール）<br>息子：D前者</p>
-          <p>むずかしい仕組みも、たとえ話でわかりやすく紐解いてくれます。</p>
+          <p><span class="nw">むずかしい仕組みも、</span><span class="nw">たとえ話で</span><span class="nw">わかりやすく</span><span class="nw">紐解いてくれます。</span></p>
         </div>
       </div>
-      <p class="common">2人とも心理学が大好き。<br>関西弁でゆるっと話します。</p>
+      <p class="common"><span class="nw">2人とも</span><span class="nw">心理学が大好き。</span><br><span class="nw">関西弁で</span><span class="nw">ゆるっと話します。</span></p>
     </div>
   </section>
 
@@ -223,21 +227,21 @@
     <div class="wrap">
       <div class="sec-title"><small>START HERE</small><h2>はじめての方へ</h2></div>
       <ol class="steps">
-        <li><span class="num">1</span><span class="t">前者後者論ってなに？</span><span class="soon">準備中</span></li>
+        <li><span class="num">1</span><span class="t"><span class="nw">前者後者論って</span><span class="nw">なに？</span></span><span class="soon">準備中</span></li>
         <li><span class="num">2</span><span class="t">前者ってどんなん？</span><span class="soon">準備中</span></li>
         <li><span class="num">3</span><span class="t">後者ってどんなん？</span><span class="soon">準備中</span></li>
-        <li><span class="num">4</span><span class="t">前者の脳タイプ（4種類）</span><span class="soon">準備中</span></li>
-        <li><span class="num">5</span><span class="t">後者の脳タイプ（5種類）</span><span class="soon">準備中</span></li>
+        <li><span class="num">4</span><span class="t"><span class="nw">前者の</span><span class="nw">脳タイプ</span><span class="nw">（4種類）</span></span><span class="soon">準備中</span></li>
+        <li><span class="num">5</span><span class="t"><span class="nw">後者の</span><span class="nw">脳タイプ</span><span class="nw">（5種類）</span></span><span class="soon">準備中</span></li>
       </ol>
-      <p class="note">話がわからんくなったら、いつでもここに戻ってきてください。</p>
+      <p class="note"><span class="nw">話がわからんくなったら、</span><span class="nw">いつでもここに</span><span class="nw">戻ってきてください。</span></p>
     </div>
   </section>
 
   <section id="question">
     <div class="wrap">
       <div class="q-box">
-        <h2>質問・お悩み、募集中！</h2>
-        <p>「こんなことがあってんけど、これって前者後者？」<br>あなたのモヤモヤを、番組で紐解くかもしれません。</p>
+        <h2><span class="nw">質問・お悩み、</span><span class="nw">募集中！</span></h2>
+        <p><span class="nw">「こんなことが</span><span class="nw">あってんけど、</span><span class="nw">これって</span><span class="nw">前者後者？」</span><br><span class="nw">あなたのモヤモヤを、</span><span class="nw">番組で</span><span class="nw">紐解くかもしれません。</span></p>
         <a class="btn btn-main disabled" href="#" aria-disabled="true">質問フォーム（準備中）</a>
       </div>
     </div>
@@ -245,15 +249,15 @@
 
   <section id="links" style="padding-top:0">
     <div class="wrap">
-      <div class="sec-title"><small>LINKS</small><h2>聴く・あそびに行く</h2></div>
+      <div class="sec-title"><small>LINKS</small><h2><span class="nw">聴く・</span><span class="nw">あそびに行く</span></h2></div>
       <div class="links">
         <a class="link" href="https://www.youtube.com/@comulabo" target="_blank" rel="noopener">
           <span class="ic yt">▶</span>
-          <span><b>YouTube</b><span>収録した回をお届け。はじめての方はこちらから</span></span>
+          <span><b>YouTube</b><span><span class="nw">収録した回をお届け。</span><span class="nw">はじめての方は</span><span class="nw">こちらから</span></span></span>
         </a>
         <a class="link" href="#" aria-disabled="true">
           <span class="ic re">♪</span>
-          <span><b>REALITY</b><span>もっとコアな話をリアルタイムで。（リンク準備中）</span></span>
+          <span><b>REALITY</b><span><span class="nw">もっとコアな話を</span><span class="nw">リアルタイムで。</span><span class="nw">（リンク準備中）</span></span></span>
         </a>
       </div>
     </div>
@@ -269,10 +273,10 @@
 <script>
 (function(){
   var lines = [
-    ["r","なんであの人と話が噛み合わへんの？"],
-    ["m","それ、性格やなくて脳の仕組みの違いかもよ"],
+    ["r","<span class=nw>なんであの人と</span><span class=nw>話が</span><span class=nw>噛み合わへんの？</span>"],
+    ["m","<span class=nw>それ、</span><span class=nw>性格やなくて</span><span class=nw>脳の仕組みの</span><span class=nw>違いかもよ</span>"],
     ["r","え、そうなん！？"],
-    ["m","前者後者論で紐解いてみよか"]
+    ["m","<span class=nw>前者後者論で</span><span class=nw>紐解いてみよか</span>"]
   ];
   var el = {m:{c:document.getElementById("charaM"),s:document.getElementById("sayM")},
             r:{c:document.getElementById("charaR"),s:document.getElementById("sayR")}};
@@ -280,7 +284,7 @@
   function step(){
     var who = lines[i][0], text = lines[i][1], other = who === "m" ? "r" : "m";
     el[other].c.classList.remove("on"); el[other].s.classList.remove("show");
-    el[who].s.textContent = text;
+    el[who].s.innerHTML = text;
     el[who].c.classList.add("on");
     requestAnimationFrame(function(){ el[who].s.classList.add("show"); });
     setTimeout(function(){ el[who].c.classList.remove("on"); }, 1800);
