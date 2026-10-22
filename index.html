@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>コミュラボ｜前者2人のコミュニケーション研究室</title>
+<meta name="description" content="「なんであの人と話が噛み合わへんの？」コミュニケーションの不思議を、前者後者論から紐解く研究室。前者タイプの2人が関西弁でゆるっと、でもしっかり解説します。">
+<meta property="og:title" content="コミュラボ｜前者2人のコミュニケーション研究室">
+<meta property="og:description" content="コミュニケーションの不思議を、前者後者論から紐解く研究室。">
+<meta property="og:image" content="https://reenn0426-jpg.github.io/comulabo/ogp.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f3fc; --paper:#ffffff; --ink:#3f3460; --ink-soft:#6e6290;
+    --lav:#9a7fd0; --lav-deep:#5a4590; --pink:#ef93be; --sky:#8fc3ee;
+    --line:#e5dcf3; --radius:24px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;font-size:17px;line-height:1.9;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+  h1,h2,h3,.round{font-family:"M PLUS Rounded 1c",sans-serif}
+
+  /* header */
+  header{position:sticky;top:0;z-index:10;background:rgba(247,243,252,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-family:"M PLUS Rounded 1c";font-size:20px;color:var(--lav-deep)}
+  .logo img{width:40px;height:40px;border-radius:50%}
+  nav a{text-decoration:none;font-size:15px;margin-left:18px;color:var(--ink-soft)}
+  nav a:hover{color:var(--lav-deep)}
+  @media (max-width:640px){nav{display:none}}
+
+  /* hero */
+  .hero{padding-top:40px;padding-bottom:20px}
+  .hero-img{border-radius:var(--radius);overflow:hidden;box-shadow:0 20px 50px -25px rgba(90,69,144,.45)}
+  .hero-text{text-align:center;padding:36px 0 10px}
+  .badge{display:inline-block;background:linear-gradient(90deg,var(--pink),var(--lav));color:#fff;font-weight:800;padding:4px 20px;border-radius:999px;font-family:"M PLUS Rounded 1c";letter-spacing:.08em;border:3px solid #fff;box-shadow:0 4px 12px -4px rgba(150,120,190,.6)}
+  .hero h1{font-size:clamp(28px,6vw,46px);line-height:1.35;margin:18px 0 8px;color:var(--lav-deep)}
+  .hero p.lead{font-size:clamp(16px,2.4vw,19px);color:var(--ink-soft);margin:0 0 26px}
+  .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:999px;font-weight:700;text-decoration:none;font-family:"M PLUS Rounded 1c";font-size:17px;transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-main{background:var(--lav-deep);color:#fff}
+  .btn-sub{background:#fff;color:var(--lav-deep);border:2px solid var(--lav)}
+  .btn.disabled{opacity:.55;pointer-events:none}
+  @media (max-width:480px){
+    .hero .btns{flex-direction:column;align-items:stretch;padding:0 12px}
+    .hero .btn{justify-content:center}
+    .steps li{padding:14px 14px;gap:12px}
+  }
+
+  section{padding:56px 0}
+  .sec-title{text-align:center;margin-bottom:32px}
+  .sec-title small{display:block;color:var(--lav);font-weight:700;letter-spacing:.15em;font-size:13px;font-family:"M PLUS Rounded 1c"}
+  .sec-title h2{margin:4px 0 0;font-size:clamp(24px,4.5vw,32px);color:var(--lav-deep)}
+
+  /* worries */
+  .bubbles{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .bubble{background:var(--paper);border-radius:20px;padding:20px 22px;position:relative;font-weight:700;border:2px solid var(--line)}
+  .bubble::after{content:"";position:absolute;left:28px;bottom:-12px;border:10px solid transparent;border-top-color:var(--paper);border-bottom:0}
+  .bubble::before{content:"";position:absolute;left:26px;bottom:-15px;border:12px solid transparent;border-top-color:var(--line);border-bottom:0}
+  .answer{margin-top:40px;text-align:center;background:var(--paper);border-radius:var(--radius);padding:28px 22px;font-size:clamp(17px,2.6vw,20px)}
+  .answer strong{color:var(--lav-deep);background:linear-gradient(transparent 62%,#eadff9 62%)}
+
+  /* members */
+  .members{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .member{background:var(--paper);border-radius:var(--radius);padding:28px 24px;text-align:center;border:2px solid var(--line)}
+  .member img{width:150px;height:150px;margin:0 auto 14px;border-radius:50%;border:5px solid #f1eafb}
+  .member h3{margin:0;font-size:26px;color:var(--lav-deep)}
+  .type{display:inline-block;margin:6px 0 12px;font-size:14px;font-weight:700;padding:2px 14px;border-radius:999px;color:#fff;font-family:"M PLUS Rounded 1c"}
+  .type.a{background:var(--sky)} .type.b{background:var(--pink)}
+  .member p{margin:0;color:var(--ink-soft);font-size:16px;text-align:left}
+  .member p.fam{text-align:center;font-size:14px;font-weight:700;color:var(--lav);background:#f6f1fc;border-radius:12px;padding:4px 10px;margin-bottom:12px}
+  .common{margin-top:22px;text-align:center;color:var(--ink-soft);font-size:16px}
+
+  /* start here */
+  .steps{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+  .steps li{display:flex;align-items:center;gap:16px;background:var(--paper);border-radius:18px;padding:16px 20px;border:2px solid var(--line)}
+  .num{flex:none;width:40px;height:40px;border-radius:50%;background:#efe7fb;color:var(--lav-deep);font-weight:800;display:grid;place-items:center;font-family:"M PLUS Rounded 1c"}
+  .steps .t{font-weight:700;flex:1}
+  .soon{flex:none;font-size:13px;color:var(--lav);font-weight:700;background:#f4effb;padding:2px 12px;border-radius:999px}
+  .note{text-align:center;color:var(--ink-soft);font-size:15px;margin-top:18px}
+
+  /* question */
+  .q-box{background:linear-gradient(135deg,#fbe9f3,#ece4fb 55%,#e2effb);border-radius:var(--radius);padding:40px 24px;text-align:center}
+  .q-box h2{margin:0 0 10px;color:var(--lav-deep);font-size:clamp(22px,4vw,28px)}
+  .q-box p{margin:0 0 24px;color:var(--ink-soft)}
+
+  /* links */
+  .links{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .link{display:flex;align-items:center;gap:16px;background:var(--paper);border-radius:20px;padding:20px 22px;text-decoration:none;border:2px solid var(--line);transition:border-color .15s}
+  .link:hover{border-color:var(--lav)}
+  .link .ic{flex:none;width:52px;height:52px;border-radius:14px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:22px}
+  .ic.yt{background:#e8445a} .ic.re{background:var(--lav)}
+  .link b{display:block;font-family:"M PLUS Rounded 1c";font-size:18px}
+  .link span{color:var(--ink-soft);font-size:14px;line-height:1.6;display:block}
+
+  /* stage animation */
+  .stage{position:relative;height:clamp(330px,52vw,470px);border-radius:var(--radius);overflow:hidden;
+    background:radial-gradient(120% 90% at 50% 100%,#fff 0%,#f3ecfc 45%,#e9e0f8 100%);
+    box-shadow:0 20px 50px -25px rgba(90,69,144,.45)}
+  .stage::after{content:"";position:absolute;left:8%;right:8%;bottom:7%;height:7%;border-radius:50%;background:rgba(150,120,200,.14);filter:blur(6px)}
+  .floaty{position:absolute;color:#c8b6ea;opacity:.75;animation:floaty 6s ease-in-out infinite}
+  .floaty svg{display:block;width:100%;height:100%}
+  @keyframes floaty{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-14px) rotate(6deg)}}
+  .chara{position:absolute;bottom:6%;height:68%;z-index:2}
+  .chara.m{left:20%} .chara.r{right:20%}
+  @media (max-width:640px){.chara.m{left:3%} .chara.r{right:3%} .chara{height:64%}}
+  .chara .body{height:100%;position:relative;transform-origin:50% 100%}
+  .chara img{height:100%;width:auto;position:absolute;bottom:0;left:50%;transform:translateX(-50%);transition:opacity .18s;max-width:none}
+  .chara .smile{position:relative;left:auto;transform:none;opacity:1}
+  .chara .talk{opacity:0}
+  .chara.on .talk{opacity:1} .chara.on .smile{opacity:0}
+  .chara.on .body{animation:hop .55s ease-in-out infinite alternate}
+  @keyframes hop{from{transform:translateY(0) scaleY(1)}to{transform:translateY(-7px) scaleY(1.01)}}
+  .chara:not(.on) .body{animation:breathe 3.2s ease-in-out infinite}
+  @keyframes breathe{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.985)}}
+  .say{position:absolute;top:4%;z-index:3;max-width:min(46%,300px);background:#fff;border-radius:20px;padding:10px 16px;
+    font-family:"M PLUS Rounded 1c";font-weight:800;color:var(--lav-deep);font-size:clamp(14px,2.2vw,18px);line-height:1.5;
+    box-shadow:0 8px 20px -10px rgba(90,69,144,.45);opacity:0;transform:translateY(8px) scale(.9);transition:all .3s cubic-bezier(.3,1.5,.6,1)}
+  .say.show{opacity:1;transform:none}
+  .say.m{left:12%} .say.r{right:12%}
+  @media (max-width:640px){.say.m{left:3%} .say.r{right:3%}}
+  .say::after{content:"";position:absolute;bottom:-10px;border:10px solid transparent;border-top-color:#fff;border-bottom:0}
+  .say.m::after{left:28px} .say.r::after{right:28px}
+  @media (prefers-reduced-motion:reduce){.floaty,.chara .body{animation:none!important}}
+
+  footer{padding:40px 0 50px;text-align:center;color:var(--ink-soft);font-size:14px}
+  footer img{width:56px;height:56px;border-radius:50%;margin:0 auto 10px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top"><img src="icon.png" alt="">コミュラボ</a>
+    <nav>
+      <a href="#about">コミュラボとは</a>
+      <a href="#members">研究員</a>
+      <a href="#start">はじめての方へ</a>
+      <a href="#question">質問募集</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="stage" aria-label="研究員のミーナッツとreeがおしゃべりしているアニメーション" role="img">
+      <span class="floaty" style="left:6%;top:42%;width:34px;height:34px;animation-delay:-1s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/><path d="M7.5 15h9"/></svg></span>
+      <span class="floaty" style="left:44%;top:16%;width:30px;height:30px;animation-delay:-2.5s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/></svg></span>
+      <span class="floaty" style="right:5%;top:46%;width:24px;height:24px;animation-delay:-4s"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z"/></svg></span>
+      <span class="floaty" style="left:47%;bottom:22%;width:20px;height:20px;animation-delay:-3s"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z"/></svg></span>
+      <span class="floaty" style="right:30%;top:34%;width:28px;height:28px;animation-delay:-.5s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l1-4.5A8 8 0 1 1 21 12z"/></svg></span>
+
+      <div class="say m" id="sayM"></div>
+      <div class="say r" id="sayR"></div>
+      <div class="chara m" id="charaM"><div class="body">
+        <img class="smile" src="minuts_smile.png" alt="">
+        <img class="talk" src="minuts_talk.png" alt="">
+      </div></div>
+      <div class="chara r" id="charaR"><div class="body">
+        <img class="smile" src="ree_smile.png" alt="">
+        <img class="talk" src="ree_talk.png" alt="">
+      </div></div>
+    </div>
+    <div class="hero-text">
+      <span class="badge">コミュラボ</span>
+      <h1>前者2人の<br>コミュニケーション研究室</h1>
+      <p class="lead">コミュニケーションの不思議を、<br>前者後者論から紐解く研究室です。</p>
+      <div class="btns">
+        <a class="btn btn-main" href="https://www.youtube.com/@comulabo" target="_blank" rel="noopener">▶ YouTubeで聴く</a>
+        <a class="btn btn-sub" href="#start">はじめての方へ</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-title"><small>ABOUT</small><h2>こんなモヤモヤ、ありませんか？</h2></div>
+      <div class="bubbles">
+        <div class="bubble">なんであの人と話が噛み合わへんの？</div>
+        <div class="bubble">ちゃんと説明したのに、なんで伝わってないん？</div>
+        <div class="bubble">悪気はないのに、なぜかいつもすれ違う…</div>
+      </div>
+      <div class="answer">
+        それ、性格のせいやなくて<br><strong>「脳の仕組みの違い」</strong>かもしれません。<br>
+        <span style="font-size:.85em;color:var(--ink-soft)">職場の人間関係、パートナーとのすれ違い、家族や友だちとのモヤモヤ。<br>前者後者論で見てみると、ちょっとラクになるかもしれません。</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="members">
+    <div class="wrap">
+      <div class="sec-title"><small>MEMBERS</small><h2>研究員しょうかい</h2></div>
+      <div class="members">
+        <div class="member">
+          <img src="ree.png" alt="ree（青いロングヘアのキャラクター）">
+          <h3>ree</h3>
+          <span class="type a">A前者</span>
+          <p class="fam">夫：後者（図書館）</p>
+          <p>広い交友関係から生まれる、いろんなネタを持ち込みます。</p>
+        </div>
+        <div class="member">
+          <img src="minuts.png" alt="ミーナッツ（ネコ耳のキャラクター）">
+          <h3>ミーナッツ</h3>
+          <span class="type b">B前者</span>
+          <p class="fam">夫：後者（ブラックホール）<br>息子：D前者</p>
+          <p>解説担当。むずかしい仕組みも、たとえ話でわかりやすく紐解いてくれます。</p>
+        </div>
+      </div>
+      <p class="common">2人とも心理学が大好き。<br>関西弁でゆるっと話します。</p>
+    </div>
+  </section>
+
+  <section id="start">
+    <div class="wrap">
+      <div class="sec-title"><small>START HERE</small><h2>はじめての方へ</h2></div>
+      <ol class="steps">
+        <li><span class="num">1</span><span class="t">前者後者論ってなに？</span><span class="soon">準備中</span></li>
+        <li><span class="num">2</span><span class="t">前者ってどんなん？</span><span class="soon">準備中</span></li>
+        <li><span class="num">3</span><span class="t">後者ってどんなん？</span><span class="soon">準備中</span></li>
+        <li><span class="num">4</span><span class="t">前者の脳タイプ（4種類）</span><span class="soon">準備中</span></li>
+        <li><span class="num">5</span><span class="t">後者の脳タイプ（5種類）</span><span class="soon">準備中</span></li>
+      </ol>
+      <p class="note">話がわからんくなったら、いつでもここに戻ってきてください。</p>
+    </div>
+  </section>
+
+  <section id="question">
+    <div class="wrap">
+      <div class="q-box">
+        <h2>質問・お悩み、募集中！</h2>
+        <p>「こんなことがあってんけど、これって前者後者？」<br>あなたのモヤモヤを、番組で紐解くかもしれません。</p>
+        <a class="btn btn-main disabled" href="#" aria-disabled="true">質問フォーム（準備中）</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="links" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-title"><small>LINKS</small><h2>聴く・あそびに行く</h2></div>
+      <div class="links">
+        <a class="link" href="https://www.youtube.com/@comulabo" target="_blank" rel="noopener">
+          <span class="ic yt">▶</span>
+          <span><b>YouTube</b><span>収録した回をお届け。はじめての方はこちらから</span></span>
+        </a>
+        <a class="link" href="#" aria-disabled="true">
+          <span class="ic re">♪</span>
+          <span><b>REALITY</b><span>もっとコアな話をリアルタイムで。（リンク準備中）</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <img src="icon.png" alt="">
+  コミュラボ｜前者2人のコミュニケーション研究室<br>
+  © 2026 comulabo
+</footer>
+
+<script>
+(function(){
+  var lines = [
+    ["r","なんであの人と話が噛み合わへんの？"],
+    ["m","それ、性格やなくて脳の仕組みの違いかもよ"],
+    ["r","え、そうなん！？"],
+    ["m","前者後者論で紐解いてみよか"]
+  ];
+  var el = {m:{c:document.getElementById("charaM"),s:document.getElementById("sayM")},
+            r:{c:document.getElementById("charaR"),s:document.getElementById("sayR")}};
+  var i = 0;
+  function step(){
+    var who = lines[i][0], text = lines[i][1], other = who === "m" ? "r" : "m";
+    el[other].c.classList.remove("on"); el[other].s.classList.remove("show");
+    el[who].s.textContent = text;
+    el[who].c.classList.add("on");
+    requestAnimationFrame(function(){ el[who].s.classList.add("show"); });
+    setTimeout(function(){ el[who].c.classList.remove("on"); }, 1800);
+    i = (i + 1) % lines.length;
+  }
+  step();
+  setInterval(step, 3000);
+})();
+</script>
+
+</body>
+</html>
