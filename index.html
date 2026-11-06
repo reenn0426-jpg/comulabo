@@ -87,6 +87,20 @@
   .steps .t{font-weight:700;flex:1}
   .soon{flex:none;font-size:13px;color:var(--lav);font-weight:700;background:#f4effb;padding:2px 12px;border-radius:999px}
   .note{text-align:center;color:var(--ink-soft);font-size:15px;margin-top:18px}
+  .steps a.t{text-decoration:none;color:inherit}
+  .steps a.t:hover{color:var(--lav-deep)}
+  .watch{flex:none;font-size:13px;color:#fff;font-weight:700;background:var(--lav-deep);padding:2px 12px;border-radius:999px;text-decoration:none}
+
+  /* episodes */
+  .eps{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .ep{display:block;background:var(--paper);border-radius:var(--radius);overflow:hidden;text-decoration:none;border:2px solid var(--line);transition:border-color .15s,transform .15s}
+  .ep:hover{border-color:var(--lav);transform:translateY(-2px)}
+  .ep .thumb{position:relative;aspect-ratio:16/9;background:#ece4fb}
+  .ep .thumb img{width:100%;height:100%;object-fit:cover}
+  .ep .play{position:absolute;right:12px;bottom:12px;width:44px;height:44px;border-radius:50%;background:rgba(90,69,144,.9);color:#fff;display:grid;place-items:center;font-size:16px}
+  .ep .meta{padding:16px 20px 20px}
+  .ep .no{display:inline-block;font-family:"M PLUS Rounded 1c";font-weight:800;font-size:13px;color:var(--lav-deep);background:#f1eafb;padding:2px 12px;border-radius:999px;margin-bottom:6px}
+  .ep h3{margin:0;font-size:18px;line-height:1.55;color:var(--ink)}
 
   /* question */
   .q-box{background:linear-gradient(135deg,#fbe9f3,#ece4fb 55%,#e2effb);border-radius:var(--radius);padding:40px 24px;text-align:center}
@@ -147,6 +161,7 @@
     <a class="logo" href="#top"><img src="icon.png" alt="">コミュラボ</a>
     <nav>
       <a href="#about">コミュラボとは</a>
+      <a href="#episodes">動画</a>
       <a href="#members">研究員</a>
       <a href="#start">はじめての方へ</a>
       <a href="#question">質問募集</a>
@@ -200,6 +215,22 @@
     </div>
   </section>
 
+  <section id="episodes" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-title"><small>EPISODES</small><h2>これまでの動画</h2></div>
+      <div class="eps">
+        <a class="ep" href="https://www.youtube.com/watch?v=g2p78oOdITo" target="_blank" rel="noopener">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/g2p78oOdITo/hqdefault.jpg" alt="第1回のサムネイル" loading="lazy"><span class="play">▶</span></div>
+          <div class="meta"><span class="no">#1</span><h3><span class="nw">あなたの「普通」は</span><span class="nw">通じてないかも！？</span></h3></div>
+        </a>
+        <a class="ep" href="https://www.youtube.com/watch?v=Y87rMW1HaV8" target="_blank" rel="noopener">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/Y87rMW1HaV8/hqdefault.jpg" alt="第2回のサムネイル" loading="lazy"><span class="play">▶</span></div>
+          <div class="meta"><span class="no">#2</span><h3><span class="nw">前者後者論とは？</span><span class="nw">見えてる世界がちがう</span><span class="nw">3つの仕組み</span></h3></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section id="members">
     <div class="wrap">
       <div class="sec-title"><small>MEMBERS</small><h2>研究員しょうかい</h2></div>
@@ -227,7 +258,7 @@
     <div class="wrap">
       <div class="sec-title"><small>START HERE</small><h2>はじめての方へ</h2></div>
       <ol class="steps">
-        <li><span class="num">1</span><span class="t"><span class="nw">前者後者論って</span><span class="nw">なに？</span></span><span class="soon">準備中</span></li>
+        <li><span class="num">1</span><a class="t" href="https://www.youtube.com/watch?v=Y87rMW1HaV8" target="_blank" rel="noopener"><span class="nw">前者後者論って</span><span class="nw">なに？</span></a><a class="watch" href="https://www.youtube.com/watch?v=Y87rMW1HaV8" target="_blank" rel="noopener">▶ 見る</a></li>
         <li><span class="num">2</span><span class="t">前者ってどんなん？</span><span class="soon">準備中</span></li>
         <li><span class="num">3</span><span class="t">後者ってどんなん？</span><span class="soon">準備中</span></li>
         <li><span class="num">4</span><span class="t"><span class="nw">前者の</span><span class="nw">脳タイプ</span><span class="nw">（4種類）</span></span><span class="soon">準備中</span></li>
