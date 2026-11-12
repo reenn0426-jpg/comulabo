@@ -106,6 +106,20 @@
   .q-box{background:linear-gradient(135deg,#fbe9f3,#ece4fb 55%,#e2effb);border-radius:var(--radius);padding:40px 24px;text-align:center}
   .q-box h2{margin:0 0 10px;color:var(--lav-deep);font-size:clamp(22px,4vw,28px)}
   .q-box p{margin:0 0 24px;color:var(--ink-soft)}
+  .qa-tag{margin-left:6px;background:#fbe9f3;color:#b0457a}
+  .qa-head{margin:40px 0 16px;text-align:center;font-family:"M PLUS Rounded 1c";font-size:20px;color:var(--lav-deep)}
+  .qa-list{display:grid;gap:20px}
+  .qa{background:var(--paper);border:2px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .qa-q{display:flex;gap:14px;padding:22px 22px 18px}
+  .qa-mark{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-family:"M PLUS Rounded 1c";font-weight:800;font-size:18px;color:#fff;background:#e88bb4}
+  .qa-mark.a{background:var(--lav-deep)}
+  .qa-who{margin:0 0 4px;font-size:13px;font-weight:700;color:var(--ink-soft)}
+  .qa-text{margin:0;line-height:1.8;color:var(--ink)}
+  .qa-a{display:flex;align-items:center;gap:14px;padding:18px 22px;background:#f6f1fd;text-decoration:none;color:inherit;border-top:2px solid var(--line);transition:background .15s}
+  .qa-a:hover{background:#ece4fb}
+  .qa-ans{flex:1;min-width:0}
+  .qa-ans b{display:block;font-family:"M PLUS Rounded 1c";color:var(--lav-deep);font-size:16px}
+  .qa-ans>span{display:block;font-size:14px;line-height:1.7;color:var(--ink-soft)}
 
   /* links */
   .links{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
@@ -227,6 +241,14 @@
           <div class="thumb"><img src="https://i.ytimg.com/vi/Y87rMW1HaV8/hqdefault.jpg" alt="第2回のサムネイル" loading="lazy"><span class="play">▶</span></div>
           <div class="meta"><span class="no">#2</span><h3><span class="nw">前者後者論とは？</span><span class="nw">見えてる世界がちがう</span><span class="nw">3つの仕組み</span></h3></div>
         </a>
+        <a class="ep" href="https://www.youtube.com/watch?v=9E_IwADtQVw" target="_blank" rel="noopener">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/9E_IwADtQVw/hqdefault.jpg" alt="第3回のサムネイル" loading="lazy"><span class="play">▶</span></div>
+          <div class="meta"><span class="no">#3</span><span class="no qa-tag">質問にお答え</span><h3><span class="nw">前者の愛情表現、</span><span class="nw">後者さんは</span><span class="nw">スルーしてるかも？</span></h3></div>
+        </a>
+        <a class="ep" href="https://www.youtube.com/watch?v=IUjBQVALnV0" target="_blank" rel="noopener">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/IUjBQVALnV0/hqdefault.jpg" alt="第4回のサムネイル" loading="lazy"><span class="play">▶</span></div>
+          <div class="meta"><span class="no">#4</span><h3><span class="nw">前者Aタイプって</span><span class="nw">どんな人？</span><span class="nw">「放し飼い」タイプ</span></h3></div>
+        </a>
       </div>
     </div>
   </section>
@@ -274,6 +296,23 @@
         <h2><span class="nw">質問・お悩み、</span><span class="nw">募集中！</span></h2>
         <p><span class="nw">「こんなことが</span><span class="nw">あってんけど、</span><span class="nw">これって</span><span class="nw">前者後者？」</span><br><span class="nw">あなたのモヤモヤを、</span><span class="nw">番組で</span><span class="nw">紐解くかもしれません。</span></p>
         <a class="btn btn-main" href="https://docs.google.com/forms/d/e/1FAIpQLSepvhMwr2ulhhcG5w93LIUk69wGTI7hxCq-6noYZGs2ro_h6Q/viewform" target="_blank" rel="noopener">質問フォームへ</a>
+      </div>
+      <h3 class="qa-head"><span class="nw">これまでに</span><span class="nw">お答えした質問</span></h3>
+      <div class="qa-list">
+        <div class="qa">
+          <div class="qa-q">
+            <span class="qa-mark">Q</span>
+            <div>
+              <p class="qa-who">トシさん（後者・ブラックホール）より</p>
+              <p class="qa-text">前者さんの愛情表現について聞いてみたいです。後者からの愛情表現はストレートで分かりやすいけど、前者からの愛情表現はたぶんキャッチできていなくて、スルーしていると思います。</p>
+            </div>
+          </div>
+          <a class="qa-a" href="https://www.youtube.com/watch?v=9E_IwADtQVw" target="_blank" rel="noopener">
+            <span class="qa-mark a">A</span>
+            <span class="qa-ans"><b>#3でお答えしました</b><span>口出しや世話焼きは、関心があるからこそ。「すごいね」より「ありがとう」が効く話も。</span></span>
+            <span class="watch">▶ 見る</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
