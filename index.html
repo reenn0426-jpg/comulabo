@@ -110,16 +110,19 @@
   .qa-head{margin:40px 0 16px;text-align:center;font-family:"M PLUS Rounded 1c";font-size:20px;color:var(--lav-deep)}
   .qa-list{display:grid;gap:20px}
   .qa{background:var(--paper);border:2px solid var(--line);border-radius:var(--radius);overflow:hidden}
-  .qa-q{display:flex;gap:14px;padding:22px 22px 18px}
-  .qa-mark{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-family:"M PLUS Rounded 1c";font-weight:800;font-size:18px;color:#fff;background:#e88bb4}
+  .qa-q,.qa-a{display:flex;flex-direction:column;gap:12px;padding:22px 24px}
+  .qa-row{display:flex;align-items:center;gap:12px}
+  .qa-mark{flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-family:"M PLUS Rounded 1c";font-weight:800;font-size:17px;line-height:1;color:#fff;background:#e88bb4}
   .qa-mark.a{background:var(--lav-deep)}
-  .qa-who{margin:0 0 4px;font-size:13px;font-weight:700;color:var(--ink-soft)}
-  .qa-text{margin:0;line-height:1.8;color:var(--ink)}
-  .qa-a{display:flex;align-items:center;gap:14px;padding:18px 22px;background:#f6f1fd;text-decoration:none;color:inherit;border-top:2px solid var(--line);transition:background .15s}
+  .qa-who{margin:0;font-size:15px;font-weight:700;color:var(--ink);line-height:1.5}
+  .qa-who small{display:block;font-size:13px;color:var(--ink-soft);font-weight:700;line-height:1.4}
+  .qa-ttl{font-family:"M PLUS Rounded 1c";color:var(--lav-deep);font-size:17px;line-height:1.5}
+  .qa-text{margin:0;font-size:16px;line-height:1.85;color:var(--ink);word-break:normal;overflow-wrap:anywhere;text-wrap:wrap}
+  .qa-a{background:#f6f1fd;text-decoration:none;color:inherit;border-top:2px solid var(--line);transition:background .15s}
+  .qa-a .qa-text{color:var(--ink-soft);font-size:15px}
   .qa-a:hover{background:#ece4fb}
-  .qa-ans{flex:1;min-width:0}
-  .qa-ans b{display:block;font-family:"M PLUS Rounded 1c";color:var(--lav-deep);font-size:16px}
-  .qa-ans>span{display:block;font-size:14px;line-height:1.7;color:var(--ink-soft)}
+  .qa-btn{align-self:flex-start;font-size:14px;color:#fff;font-weight:700;background:var(--lav-deep);padding:6px 18px;border-radius:999px}
+  @media (max-width:480px){.qa-q,.qa-a{padding:18px 18px}.qa-btn{align-self:stretch;text-align:center;padding:10px 18px;font-size:15px}}
 
   /* links */
   .links{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
@@ -301,16 +304,13 @@
       <div class="qa-list">
         <div class="qa">
           <div class="qa-q">
-            <span class="qa-mark">Q</span>
-            <div>
-              <p class="qa-who">トシさん（後者・ブラックホール）より</p>
-              <p class="qa-text">前者さんの愛情表現について聞いてみたいです。後者からの愛情表現はストレートで分かりやすいけど、前者からの愛情表現はたぶんキャッチできていなくて、スルーしていると思います。</p>
-            </div>
+            <div class="qa-row"><span class="qa-mark">Q</span><p class="qa-who">トシさんより<small>後者・ブラックホールタイプ</small></p></div>
+            <p class="qa-text">前者さんの愛情表現について聞いてみたいです。後者からの愛情表現はストレートで分かりやすいけど、前者からの愛情表現はたぶんキャッチできていなくて、スルーしていると思います。</p>
           </div>
           <a class="qa-a" href="https://www.youtube.com/watch?v=9E_IwADtQVw" target="_blank" rel="noopener">
-            <span class="qa-mark a">A</span>
-            <span class="qa-ans"><b>#3でお答えしました</b><span>口出しや世話焼きは、関心があるからこそ。「すごいね」より「ありがとう」が効く話も。</span></span>
-            <span class="watch">▶ 見る</span>
+            <div class="qa-row"><span class="qa-mark a">A</span><b class="qa-ttl">#3でお答えしました</b></div>
+            <p class="qa-text">口出しや世話焼きは、関心があるからこそ。「すごいね」より「ありがとう」が効く話も。</p>
+            <span class="qa-btn">▶ #3を見る</span>
           </a>
         </div>
       </div>
